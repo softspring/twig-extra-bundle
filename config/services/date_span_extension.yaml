@@ -1,0 +1,5 @@
+services:
+    Softspring\TwigExtraBundle\Twig\Extension\DateSpanExtension:
+        arguments:
+            $requestStack: '@request_stack'
+        tags: ['twig.extension']

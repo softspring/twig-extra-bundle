@@ -8,4 +8,5 @@ install: composer update --prefer-dist --no-interaction
   
 script:
   - composer validate
+  - ./vendor/bin/phpunit --coverage-text
   - ./vendor/bin/php-cs-fixer fix -v --diff --dry-run
