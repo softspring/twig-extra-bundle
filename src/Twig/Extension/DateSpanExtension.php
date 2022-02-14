@@ -23,7 +23,7 @@ class DateSpanExtension extends AbstractExtension
     public function getFilters(): array
     {
         return [
-            new TwigFilter('dateSpan', [$this, 'date_span'], ['is_safe' => ['html'], 'needs_environment' => true]),
+            new TwigFilter('date_span', [$this, 'dateSpan'], ['is_safe' => ['html'], 'needs_environment' => true]),
         ];
     }
 
