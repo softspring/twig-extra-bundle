@@ -35,7 +35,7 @@ class StoreRequestListener implements EventSubscriberInterface
         $this->twigAppVariable = $twigAppVariable;
     }
 
-    public static function getSubscribedEvents()
+    public static function getSubscribedEvents(): array
     {
         return [
             KernelEvents::REQUEST => [
