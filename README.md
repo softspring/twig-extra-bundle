@@ -6,6 +6,7 @@
 [![PHP Version Require](http://poser.pugx.org/softspring/twig-extra-bundle/require/php)](https://packagist.org/packages/softspring/twig-extra-bundle)
 [![Total Downloads](https://poser.pugx.org/softspring/twig-extra-bundle/downloads)](https://packagist.org/packages/softspring/twig-extra-bundle)
 [![Build status](https://github.com/softspring/twig-extra-bundle/actions/workflows/php.yml/badge.svg?branch=5.0)](https://github.com/softspring/twig-extra-bundle/actions/workflows/php.yml)
+![Coverage](https://raw.githubusercontent.com/softspring/twig-extra-bundle/5.0/.github/badges/coverage.svg)
 
 The SfsTwigExtraBundle adds some twig extra functions.
 
