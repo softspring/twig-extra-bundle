@@ -7,8 +7,6 @@ use Twig\Environment;
 use Twig\Extension\AbstractExtension;
 use Twig\TwigFilter;
 
-use function twig_date_format_filter;
-
 class DateSpanExtension extends AbstractExtension
 {
     protected RequestStack $requestStack;
@@ -32,8 +30,8 @@ class DateSpanExtension extends AbstractExtension
     {
         $request = $this->requestStack->getCurrentRequest();
         $userTimezone = $request->cookies->get('utz', 'UTC');
-        $utcTime = twig_date_format_filter($env, $dateTime, $format, 'UTC');
-        $userTime = twig_date_format_filter($env, $dateTime, $format, $userTimezone);
+        $utcTime = \twig_date_format_filter($env, $dateTime, $format, 'UTC');
+        $userTime = \twig_date_format_filter($env, $dateTime, $format, $userTimezone);
 
         if ('UTC' === $userTimezone) {
             return $utcTime;

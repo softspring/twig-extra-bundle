@@ -14,9 +14,11 @@
         "symfony/routing": "^5.4|^6.0",
         "symfony/twig-bridge": "^5.4|^6.0",
         "friendsofphp/php-cs-fixer": "9999999-dev",
+        "phpstan/phpstan": "^1.9",
         "phpunit/phpunit": "^9.5",
         "symfony/config": "^5.4 || ^6.0",
         "symfony/http-kernel": "^5.4 || ^6.0",
+        "symfony/webpack-encore-bundle": "^1.0",
         "twig/twig": "^2.0"
     },
     "autoload": {
