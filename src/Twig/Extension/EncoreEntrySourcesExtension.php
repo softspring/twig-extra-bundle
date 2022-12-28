@@ -12,15 +12,15 @@ class EncoreEntrySourcesExtension extends AbstractExtension
 
     protected string $publicPath;
 
-    /**
-     * EncoreEntryCssExtension constructor.
-     */
     public function __construct(EntrypointLookupInterface $entrypointLookup, string $publicPath)
     {
         $this->entrypointLookup = $entrypointLookup;
         $this->publicPath = $publicPath;
     }
 
+    /**
+     * @return TwigFunction[]
+     */
     public function getFunctions(): array
     {
         return [

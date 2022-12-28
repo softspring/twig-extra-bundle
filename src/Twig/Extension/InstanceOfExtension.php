@@ -15,10 +15,7 @@ class InstanceOfExtension extends AbstractExtension
         return [new TwigTest('instanceof', [$this, 'instanceOf'])];
     }
 
-    /**
-     * @param mixed $var
-     */
-    public function instanceOf($var, string $class): bool
+    public function instanceOf(mixed $var, string $class): bool
     {
         return $var instanceof $class;
     }
