@@ -31,7 +31,7 @@ class RoutingExtension extends AbstractExtension
     public function isRouteDefined(string $routeName): bool
     {
         try {
-            $this->urlGenerator->generate($routeName);
+            $this->urlGenerator->generate($routeName, ['__twig_extra_route_defined_check' => true]);
 
             return true;
         } catch (MissingMandatoryParametersException|InvalidParameterException $e) {
