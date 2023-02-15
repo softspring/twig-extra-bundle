@@ -1,5 +1,22 @@
 # CHANGELOG
 
+## [v5.0.5](https://github.com/softspring/twig-extra-bundle/releases/tag/v5.0.5)
+
+### Upgrading
+
+*Nothing to do on upgrading*
+
+### Commits
+
+- [2260625](https://github.com/softspring/twig-extra-bundle/commit/22606252696f7e799cb68ee8aa3a0d54633d0c86): Update changelog
+
+### Changes
+
+```
+ CHANGELOG.md | 27 ++++++++++++++++++++++-----
+ 1 file changed, 22 insertions(+), 5 deletions(-)
+```
+
 ## [v5.0.4](https://github.com/softspring/twig-extra-bundle/releases/tag/v5.0.4)
 
 ### Upgrading
