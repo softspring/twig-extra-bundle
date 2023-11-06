@@ -15,7 +15,7 @@
         "symfony/config": "^5.4 || ^6.0",
         "symfony/dependency-injection": "^5.4|^6.0|^7.0@dev",
         "symfony/http-foundation": "^5.4|^6.0|^7.0@dev",
-        "symfony/http-kernel": "^5.4 || ^6.0",
+        "symfony/http-kernel": "^5.4.x-dev",
         "symfony/routing": "^5.4|^6.0|^7.0@dev",
         "symfony/twig-bridge": "^5.4|^6.0|^7.0@dev",
         "symfony/webpack-encore-bundle": "^1.0",
