@@ -4,7 +4,7 @@
     "type": "symfony-bundle",
     "license": "MIT",
     "minimum-stability": "dev",
-    "prefer-stable": true,
+    "prefer-stable": false,
     "require": {
         "php": ">=8.0"
     },
@@ -13,11 +13,11 @@
         "phpstan/phpstan": "^1.9",
         "phpunit/phpunit": "^9.5",
         "symfony/config": "^5.4 || ^6.0",
-        "symfony/dependency-injection": "^5.4|^6.0",
-        "symfony/http-foundation": "^5.4|^6.0",
+        "symfony/dependency-injection": "^5.4|^6.0|^7.0@dev",
+        "symfony/http-foundation": "^5.4|^6.0|^7.0@dev",
         "symfony/http-kernel": "^5.4 || ^6.0",
-        "symfony/routing": "^5.4|^6.0",
-        "symfony/twig-bridge": "^5.4|^6.0",
+        "symfony/routing": "^5.4|^6.0|^7.0@dev",
+        "symfony/twig-bridge": "^5.4|^6.0|^7.0@dev",
         "symfony/webpack-encore-bundle": "^1.0",
         "twig/twig": "^2.0"
     },
