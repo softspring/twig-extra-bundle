@@ -18,7 +18,7 @@
         "symfony/http-kernel": "^5.4 || ^6.0",
         "symfony/routing": "^5.4|^6.0|^7.0",
         "symfony/twig-bridge": "^5.4|^6.0|^7.0",
-        "symfony/webpack-encore-bundle": "^1.0",
+        "symfony/webpack-encore-bundle": "^2.1",
         "twig/twig": "^2.10|^3.0"
     },
     "autoload": {
