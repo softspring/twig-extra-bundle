@@ -2,6 +2,7 @@
 
 namespace Softspring\TwigExtraBundle\Twig\Extension;
 
+use DateTime;
 use Symfony\Component\HttpFoundation\RequestStack;
 use Twig\Environment;
 use Twig\Extension\AbstractExtension;
@@ -26,7 +27,7 @@ class DateSpanExtension extends AbstractExtension
         ];
     }
 
-    public function dateSpan(Environment $env, \DateTime $dateTime, string $format): string
+    public function dateSpan(Environment $env, DateTime $dateTime, string $format): string
     {
         $request = $this->requestStack->getCurrentRequest();
         $userTimezone = $request->cookies->get('utz', 'UTC');

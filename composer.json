@@ -12,6 +12,7 @@
         "friendsofphp/php-cs-fixer": "3.54.*",
         "phpstan/phpstan": "^1.10",
         "phpunit/phpunit": "^10.5",
+        "rector/rector": "^1.0",
         "symfony/config": "^5.4|^6.0|^7.0",
         "symfony/dependency-injection": "^5.4|^6.0|^7.0",
         "symfony/http-foundation": "^5.4|^6.0|^7.0",
