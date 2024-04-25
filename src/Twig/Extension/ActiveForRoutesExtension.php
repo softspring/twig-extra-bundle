@@ -29,7 +29,7 @@ class ActiveForRoutesExtension extends AbstractExtension
      * Replaces twig compare function for adding "active" class:
      *      app.request.attributes.get('_route') starts with 'admin_dashboard' ? 'active': ''.
      */
-    public function activeForRoutes(string $routesStartsWith, bool $andCondition = null, string $class = 'active'): string
+    public function activeForRoutes(string $routesStartsWith, ?bool $andCondition = null, string $class = 'active'): string
     {
         $request = $this->requestStack->getCurrentRequest();
 
