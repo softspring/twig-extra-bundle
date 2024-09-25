@@ -1,11 +1,11 @@
-# SfsTwigExtraBundle
+# Twig Extra Bundle
 
-[![Latest Stable Version](https://poser.pugx.org/softspring/twig-extra-bundle/v/stable.svg)](https://packagist.org/packages/softspring/twig-extra-bundle)
-[![Latest Unstable Version](https://poser.pugx.org/softspring/twig-extra-bundle/v/unstable.svg)](https://packagist.org/packages/softspring/twig-extra-bundle)
-[![License](https://poser.pugx.org/softspring/twig-extra-bundle/license.svg)](https://packagist.org/packages/softspring/twig-extra-bundle)
-[![PHP Version Require](http://poser.pugx.org/softspring/twig-extra-bundle/require/php)](https://packagist.org/packages/softspring/twig-extra-bundle)
-[![Total Downloads](https://poser.pugx.org/softspring/twig-extra-bundle/downloads)](https://packagist.org/packages/softspring/twig-extra-bundle)
-[![Build status](https://github.com/softspring/twig-extra-bundle/actions/workflows/php.yml/badge.svg?branch=5.3)](https://github.com/softspring/twig-extra-bundle/actions/workflows/php.yml)
+![Latest Stable](https://img.shields.io/packagist/v/softspring/twig-extra-bundle?label=stable&style=flat-square)
+![Latest Unstable](https://img.shields.io/packagist/v/softspring/twig-extra-bundle?label=unstable&style=flat-square&include_prereleases)
+![License](https://img.shields.io/packagist/l/softspring/twig-extra-bundle?style=flat-square)
+![PHP Version](https://img.shields.io/packagist/dependency-v/softspring/twig-extra-bundle/php?style=flat-square)
+![Downloads](https://img.shields.io/packagist/dt/softspring/twig-extra-bundle?style=flat-square)
+[![CI](https://img.shields.io/github/actions/workflow/status/softspring/twig-extra-bundle/php.yml?branch=5.3&style=flat-square&label=CI)](https://github.com/softspring/twig-extra-bundle/actions/workflows/php.yml)
 ![Coverage](https://raw.githubusercontent.com/softspring/twig-extra-bundle/5.3/.github/badges/coverage.svg)
 
 The SfsTwigExtraBundle adds some twig extra functions.
