@@ -5,8 +5,8 @@
 ![License](https://img.shields.io/packagist/l/softspring/twig-extra-bundle?style=flat-square)
 ![PHP Version](https://img.shields.io/packagist/dependency-v/softspring/twig-extra-bundle/php?style=flat-square)
 ![Downloads](https://img.shields.io/packagist/dt/softspring/twig-extra-bundle?style=flat-square)
-[![CI](https://img.shields.io/github/actions/workflow/status/softspring/twig-extra-bundle/php.yml?branch=5.3&style=flat-square&label=CI)](https://github.com/softspring/twig-extra-bundle/actions/workflows/php.yml)
-![Coverage](https://raw.githubusercontent.com/softspring/twig-extra-bundle/5.3/.github/badges/coverage.svg)
+[![CI](https://img.shields.io/github/actions/workflow/status/softspring/twig-extra-bundle/php.yml?branch=5.4&style=flat-square&label=CI)](https://github.com/softspring/twig-extra-bundle/actions/workflows/php.yml)
+![Coverage](https://raw.githubusercontent.com/softspring/twig-extra-bundle/5.4/.github/badges/coverage.svg)
 
 The SfsTwigExtraBundle adds some twig extra functions.
 
