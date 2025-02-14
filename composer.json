@@ -2,7 +2,7 @@
     "name": "softspring/twig-extra-bundle",
     "description": "This bundle provides extra twig functions.",
     "type": "symfony-bundle",
-    "license": "MIT",
+    "license": "AGPL-3.0",
     "minimum-stability": "dev",
     "prefer-stable": true,
     "require": {
