@@ -23,7 +23,7 @@ class DateSpanExtension extends AbstractExtension
     public function getFilters(): array
     {
         return [
-            new TwigFilter('date_span', [$this, 'dateSpan'], ['is_safe' => ['html'], 'needs_environment' => true]),
+            new TwigFilter('date_span', $this->dateSpan(...), ['is_safe' => ['html'], 'needs_environment' => true]),
         ];
     }
 
@@ -36,8 +36,8 @@ class DateSpanExtension extends AbstractExtension
 
         if ('UTC' === $userTimezone) {
             return $utcTime;
-        } else {
-            return "<span title=\"$userTime $userTimezone\n$utcTime UTC\">$userTime</span>";
         }
+
+        return "<span title=\"$userTime $userTimezone\n$utcTime UTC\">$userTime</span>";
     }
 }
