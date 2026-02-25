@@ -20,7 +20,7 @@
         "symfony/routing": "^6.4 || ^7.4 || ^8.0",
         "symfony/twig-bridge": "^6.4 || ^7.4 || ^8.0",
         "symfony/webpack-encore-bundle": "^2.1",
-        "symfony/yaml": "^8.0",
+        "symfony/yaml": "^6.4 || ^7.4 || ^8.0",
         "twig/twig": "^3.4"
     },
     "minimum-stability": "dev",
