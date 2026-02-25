@@ -22,7 +22,7 @@ class ActiveForRoutesExtension extends AbstractExtension
     public function getFunctions(): array
     {
         return [
-            new TwigFunction('active_for_routes', [$this, 'activeForRoutes']),
+            new TwigFunction('active_for_routes', $this->activeForRoutes(...)),
         ];
     }
 
