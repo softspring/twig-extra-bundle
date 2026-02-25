@@ -24,21 +24,21 @@ class EncoreEntrySourcesExtension extends AbstractExtension
     public function getFunctions(): array
     {
         return [
-            new TwigFunction('encore_entry_css_source', [$this, 'getCssSource']),
-            new TwigFunction('encore_entry_js_source', [$this, 'getJsSource']),
+            new TwigFunction('encore_entry_css_source', $this->getCssSource(...)),
+            new TwigFunction('encore_entry_js_source', $this->getJsSource(...)),
         ];
     }
 
     public function getCssSource(string $entryName): string
     {
-        return array_reduce($this->entrypointLookup->getCssFiles($entryName), function ($accumulatedSource, $file) {
+        return array_reduce($this->entrypointLookup->getCssFiles($entryName), function (string $accumulatedSource, $file): string {
             return $accumulatedSource.file_get_contents("{$this->publicPath}$file");
         }, '');
     }
 
     public function getJsSource(string $entryName): string
     {
-        return array_reduce($this->entrypointLookup->getJavaScriptFiles($entryName), function ($accumulatedSource, $file) {
+        return array_reduce($this->entrypointLookup->getJavaScriptFiles($entryName), function (string $accumulatedSource, $file): string {
             return $accumulatedSource.file_get_contents("{$this->publicPath}$file");
         }, '');
     }

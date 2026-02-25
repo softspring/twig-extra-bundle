@@ -8,7 +8,7 @@ class ExtensibleAppVariable extends BaseAppVariable
 {
     protected array $extraData = [];
 
-    public function __call($method, $params)
+    public function __call(string $method, array $params)
     {
         if (method_exists($this, $method)) {
             return call_user_func_array([$this, $method], $params);
@@ -24,7 +24,7 @@ class ExtensibleAppVariable extends BaseAppVariable
         }
     }
 
-    public function __get($property)
+    public function __get(string $property): mixed
     {
         if (property_exists($this, $property)) {
             return $this->$property;
@@ -37,7 +37,7 @@ class ExtensibleAppVariable extends BaseAppVariable
         return null;
     }
 
-    public function __isset($property)
+    public function __isset(string $property)
     {
         if (property_exists($this, $property)) {
             return true;

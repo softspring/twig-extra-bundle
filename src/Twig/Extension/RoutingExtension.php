@@ -24,7 +24,7 @@ class RoutingExtension extends AbstractExtension
     public function getFunctions(): array
     {
         return [
-            new TwigFunction('route_defined', [$this, 'isRouteDefined']),
+            new TwigFunction('route_defined', $this->isRouteDefined(...)),
         ];
     }
 

@@ -10,7 +10,7 @@ use Symfony\Component\DependencyInjection\Definition;
 
 class ExtensibleAppVariablePassTest extends TestCase
 {
-    public function testProcess()
+    public function testProcess(): void
     {
         $compiler = new ExtensibleAppVariablePass();
 
