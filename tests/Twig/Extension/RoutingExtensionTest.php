@@ -12,26 +12,26 @@ use Twig\TwigFunction;
 
 class RoutingExtensionTest extends TestCase
 {
-    public function testGetFunctions()
+    public function testGetFunctions(): void
     {
         $urlGenerator = $this->getMockBuilder(UrlGenerator::class)->disableOriginalConstructor()->getMock();
         $extension = new RoutingExtension($urlGenerator);
         $functions = $extension->getFunctions();
-        $this->assertSame(1, sizeof($functions));
+        $this->assertSame(1, count($functions));
         $this->assertInstanceOf(TwigFunction::class, $functions[0]);
     }
 
-    public function testRouteDefined()
+    public function testRouteDefined(): void
     {
         $urlGenerator = $this->getMockBuilder(UrlGenerator::class)->disableOriginalConstructor()->getMock();
         $extension = new RoutingExtension($urlGenerator);
 
-        $urlGenerator->expects($this->once())->method('generate')->will($this->returnValue('/generated/url'));
+        $urlGenerator->expects($this->once())->method('generate')->willReturn('/generated/url');
 
         $this->assertTrue($extension->isRouteDefined('route'));
     }
 
-    public function testRouteDefinedWithMissingParameters()
+    public function testRouteDefinedWithMissingParameters(): void
     {
         $urlGenerator = $this->getMockBuilder(UrlGenerator::class)->disableOriginalConstructor()->getMock();
         $extension = new RoutingExtension($urlGenerator);
@@ -41,7 +41,7 @@ class RoutingExtensionTest extends TestCase
         $this->assertTrue($extension->isRouteDefined('route'));
     }
 
-    public function testRouteDefinedWithInvalidParameter()
+    public function testRouteDefinedWithInvalidParameter(): void
     {
         $urlGenerator = $this->getMockBuilder(UrlGenerator::class)->disableOriginalConstructor()->getMock();
         $extension = new RoutingExtension($urlGenerator);
@@ -51,7 +51,7 @@ class RoutingExtensionTest extends TestCase
         $this->assertTrue($extension->isRouteDefined('route'));
     }
 
-    public function testRouteNotDefined()
+    public function testRouteNotDefined(): void
     {
         $urlGenerator = $this->getMockBuilder(UrlGenerator::class)->disableOriginalConstructor()->getMock();
         $extension = new RoutingExtension($urlGenerator);

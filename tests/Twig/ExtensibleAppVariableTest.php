@@ -7,7 +7,7 @@ use Softspring\TwigExtraBundle\Twig\ExtensibleAppVariable;
 
 class ExtensibleAppVariableTest extends TestCase
 {
-    public function testSuccess()
+    public function testSuccess(): void
     {
         $app = new ExtensibleAppVariable();
 
@@ -18,7 +18,7 @@ class ExtensibleAppVariableTest extends TestCase
         $this->assertEquals('account', $app->getTestField());
     }
 
-    public function testCallExistingMethod()
+    public function testCallExistingMethod(): void
     {
         $app = new ExtensibleAppVariable();
         $app->setEnvironment('test');
