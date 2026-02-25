@@ -2,6 +2,7 @@
 
 namespace Softspring\TwigExtraBundle\Twig\Extension;
 
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\RequestStack;
 use Twig\Extension\AbstractExtension;
 use Twig\TwigFunction;
@@ -21,7 +22,7 @@ class ActiveForRoutesExtension extends AbstractExtension
     public function getFunctions(): array
     {
         return [
-            new TwigFunction('active_for_routes', [$this, 'activeForRoutes']),
+            new TwigFunction('active_for_routes', $this->activeForRoutes(...)),
         ];
     }
 
@@ -33,14 +34,14 @@ class ActiveForRoutesExtension extends AbstractExtension
     {
         $request = $this->requestStack->getCurrentRequest();
 
-        if (!$request) {
+        if (!$request instanceof Request) {
             return '';
         }
 
         $route = $request->attributes->get('_route');
 
         if (preg_match("/^$routesStartsWith/i", $route) || preg_match("/^admin_$routesStartsWith/i", $route)) {
-            return null === $andCondition || true === $andCondition ? $class : '';
+            return null === $andCondition || $andCondition ? $class : '';
         }
 
         return '';

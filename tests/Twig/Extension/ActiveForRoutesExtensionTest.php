@@ -10,15 +10,15 @@ use Twig\TwigFunction;
 
 class ActiveForRoutesExtensionTest extends TestCase
 {
-    public function testGetFunctions()
+    public function testGetFunctions(): void
     {
         $extension = new ActiveForRoutesExtension(new RequestStack());
         $functions = $extension->getFunctions();
-        $this->assertSame(1, sizeof($functions));
+        $this->assertSame(1, count($functions));
         $this->assertInstanceOf(TwigFunction::class, $functions[0]);
     }
 
-    public function testEmptyRequest()
+    public function testEmptyRequest(): void
     {
         $stack = new RequestStack();
         $extension = new ActiveForRoutesExtension($stack);
@@ -26,7 +26,7 @@ class ActiveForRoutesExtensionTest extends TestCase
         $this->assertEquals('', $extension->activeForRoutes('anything'));
     }
 
-    public function testMatchingRoute()
+    public function testMatchingRoute(): void
     {
         $request = new Request();
         $request->attributes->set('_route', 'test_route');
@@ -40,7 +40,7 @@ class ActiveForRoutesExtensionTest extends TestCase
         $this->assertEquals('other-active-class', $extension->activeForRoutes('test_', null, 'other-active-class'));
     }
 
-    public function testNonMatchingRoute()
+    public function testNonMatchingRoute(): void
     {
         $request = new Request();
         $request->attributes->set('_route', 'test_route');
@@ -53,7 +53,7 @@ class ActiveForRoutesExtensionTest extends TestCase
         $this->assertEquals('', $extension->activeForRoutes('other_route', null, 'other-active-class'));
     }
 
-    public function testMatchingRouteWithOtherCondition()
+    public function testMatchingRouteWithOtherCondition(): void
     {
         $request = new Request();
         $request->attributes->set('_route', 'test_route');
