@@ -8,13 +8,14 @@ use Symfony\Component\Routing\Exception\InvalidParameterException;
 use Symfony\Component\Routing\Exception\MissingMandatoryParametersException;
 use Symfony\Component\Routing\Exception\RouteNotFoundException;
 use Symfony\Component\Routing\Generator\UrlGenerator;
+use Symfony\Component\Routing\Generator\UrlGeneratorInterface;
 use Twig\TwigFunction;
 
 class RoutingExtensionTest extends TestCase
 {
     public function testGetFunctions(): void
     {
-        $urlGenerator = $this->getMockBuilder(UrlGenerator::class)->disableOriginalConstructor()->getMock();
+        $urlGenerator = $this->createStub(UrlGeneratorInterface::class);
         $extension = new RoutingExtension($urlGenerator);
         $functions = $extension->getFunctions();
         $this->assertSame(1, count($functions));

@@ -12,3 +12,7 @@ parameters:
                message: "#Call to an undefined method Softspring\\\\TwigExtraBundle\\\\Twig\\\\ExtensibleAppVariable::getTestField\\(\\)\\.#"
                count: 1
                path: tests/Twig/ExtensibleAppVariableTest.php
+        -
+               message: "#Call to an undefined method Softspring\\\\TwigExtraBundle\\\\Twig\\\\ExtensibleAppVariable::getMissingField\\(\\)\\.#"
+               count: 1
+               path: tests/Twig/ExtensibleAppVariableTest.php

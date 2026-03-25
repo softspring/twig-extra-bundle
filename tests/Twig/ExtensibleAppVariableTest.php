@@ -24,4 +24,12 @@ class ExtensibleAppVariableTest extends TestCase
         $app->setEnvironment('test');
         $this->assertEquals('test', $app->getEnvironment());
     }
+
+    public function testMissingDynamicGetterReturnsNull(): void
+    {
+        $app = new ExtensibleAppVariable();
+        $getter = 'getMissingField';
+
+        $this->assertNull($app->$getter());
+    }
 }

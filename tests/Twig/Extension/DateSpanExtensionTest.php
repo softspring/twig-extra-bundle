@@ -16,7 +16,7 @@ class DateSpanExtensionTest extends TestCase
 {
     public function testGetFunctions(): void
     {
-        $requestStack = $this->getMockBuilder(RequestStack::class)->disableOriginalConstructor()->getMock();
+        $requestStack = $this->createStub(RequestStack::class);
         $extension = new DateSpanExtension($requestStack);
 
         /** @var TwigFilter[] $filters */
@@ -65,5 +65,31 @@ class DateSpanExtensionTest extends TestCase
 
         $returned = $extension->dateSpan($environment, $dateTime, $format);
         $this->assertEquals($expected, str_replace("\n", ' // ', $returned));
+    }
+
+    public function testDateSpanWithoutRequestFallsBackToUtc(): void
+    {
+        $requestStack = new RequestStack();
+        $extension = new DateSpanExtension($requestStack);
+        $environment = new Environment(new ArrayLoader([]));
+
+        $returned = $extension->dateSpan($environment, new DateTime('2000-01-01 11:30:59'), 'H:i:s d-m-Y');
+
+        $this->assertSame('11:30:59 01-01-2000', $returned);
+    }
+
+    public function testDateSpanWithInvalidTimezoneCookieFallsBackToUtc(): void
+    {
+        $request = new Request([], [], [], ['utz' => 'Invalid/Timezone']);
+
+        $requestStack = $this->getMockBuilder(RequestStack::class)->disableOriginalConstructor()->getMock();
+        $requestStack->expects($this->once())->method('getCurrentRequest')->willReturn($request);
+        $extension = new DateSpanExtension($requestStack);
+
+        $environment = new Environment(new ArrayLoader([]));
+
+        $returned = $extension->dateSpan($environment, new DateTime('2000-01-01 11:30:59'), 'H:i:s d-m-Y');
+
+        $this->assertSame('11:30:59 01-01-2000', $returned);
     }
 }

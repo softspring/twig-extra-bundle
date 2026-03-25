@@ -17,7 +17,7 @@ class ExtensibleAppVariable extends BaseAppVariable
         $key = lcfirst(substr($method, 3));
 
         if (0 === strncasecmp($method, 'get', 3)) {
-            return $this->extraData[$key];
+            return $this->extraData[$key] ?? null;
         }
         if (0 === strncasecmp($method, 'set', 3)) {
             $this->extraData[$key] = $params[0];
