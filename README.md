@@ -8,13 +8,27 @@
 [![CI](https://img.shields.io/github/actions/workflow/status/softspring/twig-extra-bundle/ci.yml?branch=6.0&style=flat-square&label=CI)](https://github.com/softspring/twig-extra-bundle/actions/workflows/ci.yml)
 ![Coverage](https://raw.githubusercontent.com/softspring/twig-extra-bundle/6.0/.github/badges/coverage.svg)
 
-The SfsTwigExtraBundle adds some twig extra functions.
+This bundle provides extra twig functions.
+
+## Armonic
+
+This package is part of [Armonic](https://softspring.es/en/armonic).
 
 ## Documentation
 
-* [1. Installation](docs/1_installation.md)
-* [2. Extensible templating variables](docs/2_extensible_templating_variables.md)
-* [3. Twig functions](docs/3_twig_functions.md)
+[Armonic Documentation](https://armonic.softspring.es/latest/components/twig-extra-bundle)
+
+## Contributing
+
+Use the standard package commands before sending changes:
+
+```bash
+composer fix
+composer test
+composer test-bc
+```
+
+[Report issues](https://github.com/softspring/twig-extra-bundle/issues) and [send Pull Requests](https://github.com/softspring/twig-extra-bundle/pulls)
 
 ## License
 
