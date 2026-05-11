@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Softspring\TwigExtraBundle\Twig\Extension;
 
 use Symfony\Component\Routing\Exception\InvalidParameterException;

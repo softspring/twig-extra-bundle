@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Softspring\TwigExtraBundle\DependencyInjection\Compiler;
 
 use Softspring\TwigExtraBundle\Twig\ExtensibleAppVariable;

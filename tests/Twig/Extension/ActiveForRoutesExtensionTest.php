@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Softspring\TwigExtraBundle\Tests\Twig\Extension;
 
 use PHPUnit\Framework\TestCase;
