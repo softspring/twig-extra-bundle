@@ -36,8 +36,8 @@ class DateSpanExtension extends AbstractExtension
 
         if ('UTC' === $userTimezone) {
             return $utcTime;
-        } else {
-            return "<span title=\"$userTime $userTimezone\n$utcTime UTC\">$userTime</span>";
         }
+
+        return "<span title=\"$userTime $userTimezone\n$utcTime UTC\">$userTime</span>";
     }
 }
