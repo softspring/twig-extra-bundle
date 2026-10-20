@@ -9,7 +9,9 @@ parameters:
     bootstrapFiles:
         - vendor/autoload.php
     ignoreErrors:
-        - '#Call to an undefined method Symfony\\Component\\Config\\Definition\\Builder\\NodeDefinition::addDefaultsIfNotSet\(\).#'
+        -
+            message: '#Call to an undefined method Symfony\\Component\\Config\\Definition\\Builder\\NodeDefinition::addDefaultsIfNotSet\(\).#'
+            reportUnmatched: false
         -
             message: '#Function twig_date_format_filter not found.#'
             reportUnmatched: false
